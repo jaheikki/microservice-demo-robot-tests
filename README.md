@@ -10,6 +10,7 @@ https://app.vagrantup.com/bento/boxes/ubuntu-16.04
 - create directory in PC: <home_dir>/vagrant-ubuntu1604 and cd to it
 - vagrant init bento/ubuntu-16.04  #result is you have Vagrantfile in above mentioned directory
 - edit Vagrantfile, add following lines after line "config.vm.box = "bento/ubuntu-16.04":
+  ```
   config.vm.network "private_network", ip: "192.168.50.6"
   config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.network "forwarded_port", guest: 9001, host: 9001
@@ -19,6 +20,7 @@ https://app.vagrantup.com/bento/boxes/ubuntu-16.04
    v.memory = 4028
    v.cpus = 2
   end
+  ```
 - vagrant up  #result is virtualbox vm up and running in Oracle Virtualbox ui
 - vagrant ssh #you get ssh session to new Virtualbox vm
 
