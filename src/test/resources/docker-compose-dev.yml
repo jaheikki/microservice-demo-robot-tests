@@ -1,12 +1,12 @@
 version: '2'
 services:
   eureka:
-    build: ../../../../microservice-demo-eureka-server
+    build: ../../../../microservice-demo-eureka-server-copy
     image: eureka
     expose:
       - "8761"
   customer:
-    build: ../../../../microservice-demo-customer
+    build: ../../../../microservice-demo-customer-copy
     image: customer
     links:
      - eureka
@@ -15,7 +15,7 @@ services:
     expose:
       - "8080"
   catalog:
-    build: ../../../../microservice-demo-catalog
+    build: ../../../../microservice-demo-catalog-copy
     image: catalog
     links:
      - eureka
@@ -24,7 +24,7 @@ services:
     expose:
       - "8080"
   order:
-    build: ../../../../microservice-demo-order
+    build: ../../../../microservice-demo-order-copy
     image: order
     links:
      - eureka
@@ -33,7 +33,7 @@ services:
     expose:
       - "8080"
   zuul:
-    build: ../../../../microservice-demo-zuul-server
+    build: ../../../../microservice-demo-zuul-server-copy
     image: zuul
     links:
      - eureka
