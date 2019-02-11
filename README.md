@@ -64,6 +64,7 @@ Note: Replace ${ADMIN} with admin username (then exit and log in to VirtualBox V
  - cd /home/vagrant/git/microservice-demo-robot-tests/src/test/resources/
  - docker-compose -f docker-compose-dev.yml up -d  #result is demo application containers started, see 'docker ps'
  - wait 5 minutes to applications getting up
+ - Note: Demo app (Orders tab) is kind of unstable, so get fresh start, stop app: docker-compose -f docker-compose-dev.yml down -v
 
 ## Test demo application UI in your PC
  - http://localhost:8080
@@ -73,13 +74,13 @@ Note: Replace ${ADMIN} with admin username (then exit and log in to VirtualBox V
  - make e.g. 'git' directory under e.g. home dir and cd to it
  - git clone https://github.com/jaheikki/microservice-demo-robot-tests.git
 
-## Start IntelliJ IDEA in your own PC
+## Start IntelliJ IDEA in your PC
 https://www.jetbrains.com/idea/download
  - Install 'Robot Framework support' plugin to intelliJ IDEA (Preferences/Plugins)
  - Open Robot project: File/Open + navigate to git clone dir + select pom.xml + 'Open'  #in new window
  - Open robot file: src/main/resources/acceptance-tests/MicroserviceAcceptanceTests.robot  #now editing tests is possible
 
-## Run Robot tests in your pc (Notice that chromedriver must exist in path)
+## Run Robot tests in your PC (Notice that chromedriver must exist in path)
  - mvn -Probot clean install -Drobot.tag="Order product"  #single test by tag
  - mvn -Probot clean install  #run all tests
 
