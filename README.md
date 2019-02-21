@@ -43,7 +43,7 @@ https://app.vagrantup.com/bento/boxes/ubuntu-16.04
  - sudo apt-get -y update
  - sudo apt-get install -y docker-ce
 
-Note: Replace ${ADMIN} with admin username (then exit and log in to VirtualBox VM again):
+Note: After running following commands exit and log in to VirtualBox VM again:
  - sudo usermod -aG docker $USER 
  - sudo chmod g+rw /var/run/docker.sock
 
